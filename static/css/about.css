@@ -41,3 +41,15 @@ p {
     color: #666;
     text-align: justify;
 }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    .image-section {
+        width: 100%;
+    }
+
+    img {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
