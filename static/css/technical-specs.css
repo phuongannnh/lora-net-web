@@ -28,12 +28,12 @@ strong {
 h1 {
     margin-top: 2rem;
     color: #333;
-    text-align: justify;
+    text-align: left;
 }
 
 p {
     color: #666;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 0.5rem;
 }
 
