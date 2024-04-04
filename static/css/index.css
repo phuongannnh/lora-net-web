@@ -103,3 +103,12 @@ footer {
     max-width: 50%;
     height: auto;
 }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .tabs li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
