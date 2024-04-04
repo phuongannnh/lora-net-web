@@ -1,0 +1,52 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #add8e680;
+}
+
+.container {
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0.78125em;
+    overflow: hidden;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.team-member img {
+    width: 12em;
+    height: 12em;
+    object-fit: cover;
+    margin-right: 3em;
+}
+
+.team-member-info {
+    flex: 1;
+}
+
+.team-member-info p {
+    margin: 0.3125em 0;
+}
+
+h1 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.25em;
+}
+
+p {
+    color: #666;
+    text-align: justify;
+}

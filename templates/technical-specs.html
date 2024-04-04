@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Specifications</title>
+    <link rel="stylesheet" href="../static/css/technical-specs.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Technical Specifications</h1>
+
+        <section id="introduction">
+            <p>As specified in the requirement specification, the project aims to develop a practical system that
+                utilizes Meshtastic, Arduino-based nodes, and drones to create a deployable mobile network in disaster-prone or
+                network-deprived areas. The main components include LoRaWAN Arduino modules, the use of the Meshtastic project to create our
+                mobile network, an application developed with Flutter that serves as the controller of the said mobile network,
+                and drones to deploy the modules so that the network region can be created. Modules will be reprogrammed
+                with the necessary code, C++, to correspond to the app. The Meshtastic communication project
+                will be a main function in our Lora-Net application to help create the off-grid mobile network using an
+                API. Drones will be equipped with an Arduino module, both being equipped with different sensors to identify
+                their surroundings, and a designated feature to carry each module to its intended location.</p>
+        </section>
+
+        <section id="system-overview">
+            <figure>
+                <img src="../static/img/data-flow.jpg" alt="System Architecture">
+                <figcaption>System Architecture</figcaption>
+            </figure>
+
+            <section id="arduino-modules-description">
+                <p><strong>Arduino Modules</strong></p>
+                <P>The Arduino Modules subsystem manages the functionality of all the Arduino modules used to create
+                    the LoRa mesh network. In terms of hardware, the drones and sensors used in the project will be
+                    integrated through the Arduino modules. This subsystem will also be responsible for managing all the data being
+                    passed through the network.</p>
+            </section>
+
+            <section id="meshtastic-description">
+                <p><strong>Meshtastic</strong></p>
+                <p>The Meshtastic subsystem involves using Meshtastic’s routing protocol to help create a network for
+                    the region that will be marked by the Arduino modules. Meshtastic devices within range will form a
+                    mesh network that allows messages to pass back and forth between the connected devices.
+                    It primarily includes the Mesh routing algorithm, which uses Bluetooth to connect to both the Lora
+                    32 modules and the Lora-Net application.</p>
+            </section>
+
+            <section id="drone-description">
+                <p><strong>Drone</strong><sup>*</sup></p>
+                <p>The drone subsystem will consist of two main components, the module mount and the drone remote.
+                    This subsystem will play an important role in transporting the Arduino modules after the user
+                    receives the optimal network setup location from the LoRa-Net application.
+                    The Arduino modules will be attached to the drones via the module mount,
+                    and the instruction/direction for the drone will be received from the drone remote that the user
+                    controls.</p>
+            </section>
+
+            <section id="sensors-description">
+                <p><strong>Sensors</strong></p>
+                <p>The Sensor subsystem is responsible for collecting critical data from both the Arduino modules and
+                    drones. It comprises several individual subsystems, each dedicated to specific functions, including GPS
+                    location data, battery level monitoring, and accelerometer data. These subsystems work collaboratively to
+                    optimize the placement of the Arduino modules and drones within the desired network coverage area.
+                </p>
+            </section>
+
+            <section id="hmi-description">
+                <p><strong>Human Machine Interface</strong></p>
+                <p>The Human Machine Interface should be able to allow the user to interact and manipulate the LoRa Net.
+                    The subsystems under this section would help the user set preferences with the network, GPS, and
+                    application, sending information and requests to the Arduino Modules to help carry out some of these commands.
+                    We also hope to add drone functionality for the user, but this is a lesser goal.</p>
+            </section>
+
+        </section>
+
+        <footer>
+            <p><sup>*</sup> <span class="footnote">Future Considerations: Drones could be utilized for transporting Arduino modules in the proposed network setup.</span></p>
+        </footer>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+body {
+    position: relative;
+    /* Photo by <a href="https://unsplash.com/@rgaleriacom?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ricardo Gomez Angel</a> on <a href="https://unsplash.com/photos/shallow-focus-photo-of-white-quadcopter-d7CZYeWZyzc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+    background-image: url('../img/ricardo.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 216, 230, 0.502);
+    z-index: -1;
+}
+
+.container {
+    max-width: 75em;
+    margin: auto;
+    padding: 1.25em;
+}
+
+header,
+nav.tabs,
+section,
+footer {
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    margin-top: 3em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 4em;
+}
+
+h2 {
+    font-size: larger;
+}
+
+.tabs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tabs li {
+    display: inline-block;
+    margin-right: 1.25em;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    padding: 0.625em 0.9375em;
+}
+
+.tabs a:hover {
+    background-color: #92b7c3;
+    color: #fff;
+}
+
+.tabs a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.125em;
+    background-color: #547a84;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.tabs a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: small;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.container img {
+    max-width: 50%;
+    height: auto;
+}
